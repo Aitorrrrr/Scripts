@@ -1,0 +1,17 @@
+read -p "Introduzca los litros de agua que ha consumido este mes: " l
+
+while [ $l -lt 1 ]; do
+    echo "No puede introducir unos litros negativos o equivalentes a 0"
+    read -p "Introduzcalos de nuevo: " l
+done
+
+if [ $l -le 50 ]; then
+    echo "Su factura asciende a 20€"
+else
+    if [ $l -le 200 ]; then
+	echo "Su factura asciende a $((((l-50)/5)+20))"
+    else
+	echo "Su factura asciende a $((((l-200)/10)+20+30))"
+    fi
+fi
+

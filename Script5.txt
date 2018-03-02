@@ -1,0 +1,11 @@
+echo "Introduzca números de uno en uno para sumarlos, 0 para salir"
+read -p "Introduzca el primer número: " x
+
+y=$x
+
+while [ $x -ne 0 ]; do
+    read -p "Introduzca el siguiente número o un 0 para salir: " x
+    y=$((y+x))
+done
+
+echo "La suma de los números introducidos es $y"

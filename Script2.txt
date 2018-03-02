@@ -1,0 +1,12 @@
+read -p "Introduzca un valor mayor de 0: " x
+
+while [ $x -lt 1 ]; do
+    echo "El valor introducido es menor o igual a 0, necesitamos uno mayor"
+    read -p "Introduzca el valor de nuevo: " x
+done
+
+if [ $((x%2)) -eq 0 ]; then
+    echo "El valor introducido es un número par";
+else
+    echo "El valor introducido es un número impar";
+fi

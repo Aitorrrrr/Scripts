@@ -1,0 +1,20 @@
+read -p "Introduzca su nota: " x
+
+while [ $x -lt 0 ] || [ $x -gt 10 ]; do
+    echo "Ha introducido una nota invalida"
+    read -p "Introduzca su nota de nuevo: " x
+done
+
+echo "Su nota tiene una calificación de";
+case $x in
+    1) echo "Suspenso" ;;
+    2) echo "Suspenso" ;;
+    3) echo "Suspenso" ;;
+    4) echo "Suspenso" ;;
+    5) echo "Suficiente" ;;
+    6) echo "Bien" ;;
+    7) echo "Notable" ;;
+    8) echo "Notable" ;;
+    9) echo "Sobresaliente" ;;
+    10) echo "Sobresaliente" ;;
+esac

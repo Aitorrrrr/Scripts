@@ -1,0 +1,21 @@
+read -p "Introduzca el día del mes: " x
+
+while [ $x -lt 1 ] || [ $x -gt 30 ]; do
+    echo "Solo puede introducir un día del 1 al 30"
+    read -p "Introduzcalo de nuevo: " x
+done
+
+y=$x
+while [ $x -gt 7 ]; do
+    x=$((x-7))
+done
+
+case $x in
+    1) echo "El día $y es lunes";;
+    2) echo "El día $y es martes";;
+    3) echo "El día $y es miercoles";;
+    4) echo "El día $y es jueves";;
+    5) echo "El día $y es viernes";;
+    6) echo "El día $y es sabado";;
+    7) echo "El día $y es domingo";;
+esac

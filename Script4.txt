@@ -1,0 +1,10 @@
+read -p "Introduzca un número mayor de 0: " x
+
+while [ $x -lt 1 ]; do
+    echo "Ha introducido un número menor o igual a 0"
+    read -p "Introduzca el número de nuevo " x
+done
+
+for i in `seq 0 $x`; do
+    echo "$i"
+done
